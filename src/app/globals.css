@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Définition des couleurs principales */
+:root {
+  --primary-pink: #f3336d;
+  --secondary-orange: #ff574c;
+  --tertiary-red: #ff3762;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* Styles globaux */
+body {
+  @apply bg-black text-white font-sans;
+}
+
+/* Boutons principaux */
+.btn-primary {
+  @apply bg-[var(--primary-pink)] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-[var(--tertiary-red)];
+}
+
+/* Titres */
+h1, h2, h3 {
+  @apply font-bold text-white;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
