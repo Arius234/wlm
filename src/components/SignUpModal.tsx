@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { useEffect } from "react";
 import Image from "next/image";
 import { FaFacebook, FaGoogle, FaPhone, FaTimes } from "react-icons/fa";
