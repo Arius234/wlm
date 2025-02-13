@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* Modals */}
       <SignUpModal isOpen={isSignUpOpen} onClose={handleCloseSignUp} />
-      <LoginModal isOpen={isLoginOpen} onClose={handleCloseLogin} />
+      <LoginModal isOpen={isLoginOpen} onClose={handleCloseLogin} type="login" />
     </div>
   );
 }
