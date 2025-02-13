@@ -7,12 +7,16 @@ export default function PreProfile() {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user); // Plus d'erreur ici
-    });
+    // Vérification si 'auth' est défini
+    if (auth) {
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        setUser(user); // Mise à jour de l'état
+      });
 
-    return () => unsubscribe();
-  }, []);
+      // Cleanup de l'abonnement
+      return () => unsubscribe();
+    }
+  }, []); // Le hook s'exécute une seule fois au montage du composant
 
   return (
     <div>
